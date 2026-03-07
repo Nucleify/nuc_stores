@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('localStorageSetItem', (): void => {
   beforeEach((): void => {
@@ -10,7 +10,7 @@ describe('localStorageSetItem', (): void => {
   })
 
   it('sets the item', (): void => {
-    atomic.localStorageSetItem('key', 'value')
+    nucleify.localStorageSetItem('key', 'value')
 
     const storedValue = localStorage.getItem('key')
 

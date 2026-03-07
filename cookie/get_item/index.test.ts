@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('cookieGetItem', (): void => {
   beforeEach((): void => {
@@ -12,13 +12,13 @@ describe('cookieGetItem', (): void => {
   it('returns value when key exists', (): void => {
     document.cookie = 'key=stored'
 
-    const result = atomic.cookieGetItem('key')
+    const result = nucleify.cookieGetItem('key')
 
     expect(result).toBe('stored')
   })
 
   it('returns undefined when key is missing', (): void => {
-    const result = atomic.cookieGetItem('missing')
+    const result = nucleify.cookieGetItem('missing')
 
     expect(result).toBeUndefined()
   })

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('localStorageGetItem', (): void => {
   beforeEach((): void => {
@@ -12,13 +12,13 @@ describe('localStorageGetItem', (): void => {
   it('returns value when key exists', (): void => {
     localStorage.setItem('key', 'stored')
 
-    const result = atomic.localStorageGetItem('key')
+    const result = nucleify.localStorageGetItem('key')
 
     expect(result).toBe('stored')
   })
 
   it('returns undefined when key is missing', (): void => {
-    const result = atomic.localStorageGetItem('missing')
+    const result = nucleify.localStorageGetItem('missing')
 
     expect(result).toBeUndefined()
   })

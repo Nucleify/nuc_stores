@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('sessionStorageSetItem', (): void => {
   beforeEach((): void => {
@@ -10,7 +10,7 @@ describe('sessionStorageSetItem', (): void => {
   })
 
   it('sets the item', (): void => {
-    atomic.sessionStorageSetItem('key', 'value')
+    nucleify.sessionStorageSetItem('key', 'value')
 
     const storedValue = sessionStorage.getItem('key')
 

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('cookieSetItem', (): void => {
   beforeEach((): void => {
@@ -10,7 +10,7 @@ describe('cookieSetItem', (): void => {
   })
 
   it('sets the item', (): void => {
-    atomic.cookieSetItem('key', 'value')
+    nucleify.cookieSetItem('key', 'value')
 
     const storedValue = document.cookie
 
