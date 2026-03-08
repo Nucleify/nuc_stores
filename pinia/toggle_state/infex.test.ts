@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
 import * as nucleify from 'nucleify'
+
 import { testCases } from './cases'
 
 describe('toggleState', (): void => {
