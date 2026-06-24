@@ -26,8 +26,9 @@ export function invalidateCookieCache(): void {
 }
 
 export function cookieGetItem(name: string): string | undefined {
-  if (import.meta.client) {
-    return parseCookies().get(name)
+  if (typeof document === 'undefined') {
+    return undefined
   }
-  return undefined
+
+  return parseCookies().get(name)
 }

@@ -1,5 +1,5 @@
 export function sessionStorageGetItem(item: string): string | undefined {
-  if (import.meta.client) {
+  if (typeof window !== 'undefined') {
     return sessionStorage.getItem(item) || undefined
   } else {
     return undefined
